@@ -1,0 +1,12 @@
+node_modules
+.env
+.DS_Store
+backend/prisma/dev.db
+backend/prisma/*.db
+backend/.prisma
+backend/dist
+apps/web/dist
+apps/flutter/build
+apps/flutter/.dart_tool
+apps/flutter/.flutter-plugins
+apps/flutter/.flutter-plugins-dependencies

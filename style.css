@@ -1,0 +1,57 @@
+:root{
+  --bg:#0b0f17; --panel:#101827; --card:#121c2e; --muted:#8aa0c6;
+  --line:rgba(255,255,255,.08); --text:#e9f1ff; --accent:#6ee7ff; --accent2:#7c5cff;
+}
+*{box-sizing:border-box; font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial;}
+body{margin:0; background:
+  radial-gradient(700px 400px at 80% 10%, rgba(124,92,255,.22), transparent),
+  radial-gradient(700px 400px at 15% 30%, rgba(110,231,255,.18), transparent),
+  linear-gradient(180deg,#070a10,#0b1220);
+  color:var(--text);
+}
+button,input{border:1px solid var(--line); background:rgba(18,28,46,.65); color:var(--text); border-radius:14px; padding:10px 12px;}
+button{cursor:pointer; font-weight:800}
+button.ghost{background:transparent}
+.shell{min-height:100vh; display:grid; place-items:center; padding:20px}
+.card{width:min(560px,100%); background:rgba(16,24,39,.55); border:1px solid var(--line); border-radius:22px; padding:22px; backdrop-filter: blur(10px)}
+h1{margin:0 0 6px; letter-spacing:.3px}
+.muted{color:var(--muted); margin:0 0 14px}
+.grid{display:grid; gap:10px}
+.row{display:flex; gap:10px; align-items:center}
+.row > *{flex:1}
+.hint{color:var(--muted); font-size:12px; line-height:1.5; margin-top:10px}
+
+.layout{display:grid; grid-template-columns:84px 320px 1fr; height:100vh}
+.rail{border-left:1px solid var(--line); background:rgba(16,24,39,.55); padding:12px; display:flex; flex-direction:column; gap:12px}
+.brand{width:56px; height:56px; border-radius:18px; display:grid; place-items:center; background:linear-gradient(135deg, rgba(110,231,255,.16), rgba(124,92,255,.16)); border:1px solid rgba(110,231,255,.18); font-weight:900}
+.srvList{display:flex; flex-direction:column; gap:10px; overflow:auto}
+.srv{width:56px; height:56px; border-radius:18px; font-weight:800}
+.fab{margin-top:auto; width:56px; height:56px; border-radius:18px; border-color:rgba(110,231,255,.18); background:linear-gradient(135deg, rgba(110,231,255,.22), rgba(124,92,255,.22));}
+
+.left{border-left:1px solid var(--line); background:rgba(16,24,39,.35); padding:14px; display:flex; flex-direction:column; gap:14px}
+.me{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px; border:1px solid var(--line); border-radius:18px; background:rgba(18,28,46,.55)}
+.name{font-weight:900}
+.sub{color:var(--muted); font-size:12px}
+.section .title{color:var(--muted); font-size:12px; margin:6px 0}
+.list{display:flex; flex-direction:column; gap:8px}
+.item{border-radius:14px; text-align:right; padding:10px 12px}
+.item.active{border-color:rgba(110,231,255,.25); background:rgba(110,231,255,.06)}
+.friendRow{display:flex; gap:8px}
+.friendRow input{flex:1}
+
+.main{display:flex; flex-direction:column}
+.topbar{display:flex; justify-content:space-between; align-items:center; padding:14px 16px; border-bottom:1px solid var(--line); background:rgba(16,24,39,.25)}
+.roomTitle{font-weight:900}
+.messages{flex:1; overflow:auto; padding:16px; display:flex; flex-direction:column; gap:10px}
+.msg{max-width:72%}
+.msg.mine{align-self:flex-end}
+.meta{color:var(--muted); font-size:11px; margin-bottom:4px}
+.bubble{padding:12px 14px; border-radius:16px; background:rgba(18,28,46,.65); border:1px solid var(--line); white-space:pre-wrap; line-height:1.5}
+.msg.mine .bubble{border-color:rgba(124,92,255,.25); background:rgba(124,92,255,.07)}
+.composer{display:flex; gap:10px; padding:14px; border-top:1px solid var(--line); background:rgba(16,24,39,.25)}
+.composer input{flex:1}
+
+.toast{position:fixed; bottom:18px; left:18px; padding:12px 14px; border-radius:14px; border:1px solid var(--line); background:rgba(18,28,46,.85); box-shadow:0 18px 40px rgba(0,0,0,.35); max-width:360px}
+.toast.ok{border-color:rgba(46,229,157,.35)}
+.toast.bad{border-color:rgba(255,77,109,.35)}
+.hidden{display:none}

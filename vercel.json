@@ -1,0 +1,8 @@
+{
+  "projects": [
+    {
+      "name": "chatkick-web",
+      "rootDirectory": "apps/web"
+    }
+  ]
+}
